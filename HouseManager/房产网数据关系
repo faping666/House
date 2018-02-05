@@ -1,0 +1,20 @@
+
+#state状态字段  数据库默认值 1 int类型  0停用 1启用 
+
+username用户表          uid uname password state
+housetype房源类型       htypeid htypename state  新房 二手 租房
+area区域表              aid aname state
+hstate楼盘状态表        hsid hsname state 现房 期房 尾房
+circle商圈表            cid cname state aid(区域表外键) 
+premises楼盘类型        pid pname state  商住两用 普通住宅 商铺 别墅
+ptype类型               ptid ptname state 门面房交易市场  房地产租赁市场 房地产买卖市场
+spruce 装修             sid sname state 精装 简装 毛坯 房改房
+gallery图库             gid gname state path hid(楼盘表外键)
+rate 利率 		rid rname state 
+ratetable 利率表        rtid rtname state rate1(1-5) rate2(5-30) rid(利率外键)
+houseinfo房源信息       id name opentime gettime state 
+housemessage楼盘信息推送 mid mname state htypeid(房源类型)
+house楼盘表       hid hname aid(区域外键) hsid(楼盘状态) cid(商圈 ) pid(楼盘类型) ptid(类型) sid(装修) price价格 opentime开盘时间 gettime交房时间 address地址 tel电话 gid(图库) school学区所属 developers开发商 developersid许可证 coveredArea建筑面积 floorSpace占地面积 plotRatio容积率 greenigRate绿化率 pripertyManagement物业公司 propertyManagermentFee物业费 carport车位  discountsinfo优惠信息 surroundingFacility周边配套 htypeid(房源类型)
+infomation资讯表 iid iname名称 info类容 state 
+comment评论             cid cinfo state time iid(houseinfo房源信息外键)
+
